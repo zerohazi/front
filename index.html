@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My first Chartist Tests</title>
+<!--    ここにCDNを貼る-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css" />
+  </head>
+  <body>
+    <style>
+    .ct-chart{
+      width: 30%;
+      height: 30%;
+      };
+    </style>
+    記録
+    <br>
+    ゲストさん
+    <div class="ct-chart ct-square"></div>
+    <!-- ここにjsのコードを書く-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.js"></script>
+   <script>
+     var abc = [
+       [ 1, 2, 3, 4, 5, 6, 7]
+     ];
+    var data = {
+  // A labels array that can contain any sort of values
+  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat','Sun'],
+  // Our series array that contains series objects or in this case series data arrays
+  series: abc
+};
+
+// Create a new line chart object where as first parameter we pass in a selector
+// that is resolving to our chart container element. The Second parameter
+// is the actual data object.
+new Chartist.Line('.ct-chart', data);
+    </script>
+  </body>
+</html>
